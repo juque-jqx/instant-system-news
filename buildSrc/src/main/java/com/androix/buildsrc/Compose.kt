@@ -5,6 +5,7 @@ object Compose {
     // UI
     const val ui = "androidx.compose.ui:ui"
     const val material = "androidx.compose.material:material"
+    const val material3 = "androidx.compose.material3:material3:1.1.2"
 
     // Android Studio Preview Support
     const val uiToolingPreview = "androidx.compose.ui:ui-tooling-preview"

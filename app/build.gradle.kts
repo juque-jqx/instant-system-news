@@ -94,17 +94,18 @@ dependencies {
     implementation(Retrofit.moshiConverter)
 
     // Room
-    implementation(Room.runtime)
-    implementation(Room.ktx)
-    kapt(Room.compiler)
-    androidTestImplementation(Room.testing)
+//    implementation(Room.runtime)
+//    implementation(Room.ktx)
+//    kapt(Room.compiler)
+//    androidTestImplementation(Room.testing)
 
     // Testing
-    testImplementation(JUnit.junit4)
-    androidTestImplementation(JUnit.ext)
+    testImplementation(Test.junit4)
+    androidTestImplementation(Test.junitAndroidExt)
 
     // Module
-    implementation(project(Module.CoreUi))
+    implementation(project(Module.coreUi))
     implementation(project(Module.currentWeather))
     implementation(project(Module.forecasting))
+    implementation(project(Module.news))
 }

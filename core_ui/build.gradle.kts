@@ -5,10 +5,10 @@ plugins {
 
 android {
     namespace = "com.aliahmed.core_ui"
-    compileSdk = 33
+    compileSdk = ProjectConfig.compileSdk
 
     defaultConfig {
-        minSdk = 21
+        minSdk = ProjectConfig.minSdk
         targetSdk = 33
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -49,6 +49,7 @@ dependencies {
 
     implementation(Compose.ui)
     implementation(Compose.material)
+    implementation(Compose.material3)
     implementation(Compose.activityCompose)
     implementation(Compose.lifecycleViewModelCompose)
     implementation(Compose.navigationCompose)

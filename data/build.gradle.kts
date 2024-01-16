@@ -7,18 +7,12 @@ plugins {
     id("com.google.dagger.hilt.android")
 }
 
-java {
-    sourceCompatibility = JavaVersion.VERSION_1_7
-    targetCompatibility = JavaVersion.VERSION_1_7
-}
-
-
 android {
     namespace = "com.aliahmed.data"
-    compileSdk = 33
+    compileSdk = ProjectConfig.compileSdk
 
     defaultConfig {
-        minSdk = 21
+        minSdk = ProjectConfig.minSdk
         targetSdk = 33
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -58,4 +52,9 @@ dependencies {
     implementation(Retrofit.gsonConverter)
     implementation(Retrofit.gson)
 
+    // Room
+    implementation(Room.runtime)
+    implementation(Room.ktx)
+    kapt(Room.compiler)
+    androidTestImplementation(Room.testing)
 }

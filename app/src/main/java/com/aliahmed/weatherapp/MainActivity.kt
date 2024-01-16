@@ -76,8 +76,9 @@ class MainActivity : ComponentActivity() {
     @Composable
     fun BottomNavigationBar(navController: NavController, onValueChange : (String) -> Unit) {
         val items = listOf(
+            NavigationItem.News,
             NavigationItem.CurrentWeather,
-            NavigationItem.Forecasting
+            NavigationItem.Forecasting,
         )
 
         BottomNavigation(

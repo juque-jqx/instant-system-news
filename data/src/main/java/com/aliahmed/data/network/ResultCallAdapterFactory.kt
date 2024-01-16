@@ -1,4 +1,4 @@
-package com.aliahmed.data.repository
+package com.aliahmed.data.network
 import com.aliahmed.data.model.BaseApiResponse
 import com.aliahmed.data.model.ServerErrorCode
 import com.aliahmed.data.network.ApiException

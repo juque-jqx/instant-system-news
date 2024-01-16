@@ -50,7 +50,9 @@ fun ForecastingScreen(
             FullScreenLoading()
         }
         is Resource.Error -> {
-            ErrorDialog(message = pageState.message, {})
+            ErrorDialog(
+                message = pageState.message,
+            )
         }
 
         is Resource.Success -> {

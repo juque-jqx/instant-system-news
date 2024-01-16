@@ -1,7 +1,7 @@
 package com.aliahmed.data.repository
 
 import com.aliahmed.data.model.CurrentWeather
-import com.aliahmed.data.network.ApiService
+import com.aliahmed.data.network.WeatherApiService
 import javax.inject.Inject
 
 interface CurrentWeatherRepository  {
@@ -9,7 +9,7 @@ interface CurrentWeatherRepository  {
     suspend fun getForecasting(days: String): Result<CurrentWeather>
 }
 
-class CurrentWeatherRepositoryImpl @Inject constructor(private val apiService: ApiService) : CurrentWeatherRepository {
+class CurrentWeatherRepositoryImpl @Inject constructor(private val apiService: WeatherApiService) : CurrentWeatherRepository {
 
     override suspend fun getCurrentWeather(): Result<CurrentWeather> {
         return apiService.getCurrentWeather()

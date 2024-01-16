@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.kapt3.base.Kapt.kapt
-
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
@@ -9,10 +7,10 @@ plugins {
 
 android {
     namespace = "com.aliahmed.forecasting"
-    compileSdk = 33
+    compileSdk = ProjectConfig.compileSdk
 
     defaultConfig {
-        minSdk = 21
+        minSdk = ProjectConfig.minSdk
         targetSdk = 33
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -65,7 +63,7 @@ dependencies {
     debugImplementation(Compose.uiTestManifest)
 
     // Module
-    implementation(project(Module.CoreUi))
+    implementation(project(Module.coreUi))
     implementation(project(Module.data))
 
     //coil
@@ -76,9 +74,9 @@ dependencies {
     kapt(Hilt.compiler)
 
     //Test
-    implementation(JUnit.junit4)
-    implementation(JUnit.ext)
-    testImplementation("io.mockk:mockk:1.12.5")
-    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4")
+    implementation(Test.junit4)
+    implementation(Test.junitAndroidExt)
+    testImplementation(Test.mockk)
+    testImplementation(Test.coroutinesTest)
 
 }

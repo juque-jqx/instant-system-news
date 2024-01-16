@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.kapt3.base.Kapt.kapt
-
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
@@ -9,10 +7,10 @@ plugins {
 
 android {
     namespace = "com.aliahmed.current_weather"
-    compileSdk = 33
+    compileSdk = ProjectConfig.compileSdk
 
     defaultConfig {
-        minSdk = 21
+        minSdk = ProjectConfig.minSdk
         targetSdk = 33
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -64,7 +62,7 @@ dependencies {
     debugImplementation(Compose.uiTestManifest)
 
     // Module
-    implementation(project(Module.CoreUi))
+    implementation(project(Module.coreUi))
     implementation(project(Module.data))
 
     // Hilt
@@ -75,9 +73,9 @@ dependencies {
     implementation(Coil.coilCompose)
 
     //Test
-    implementation(JUnit.junit4)
-    implementation(JUnit.ext)
-    testImplementation("io.mockk:mockk:1.12.5")
-    androidTestImplementation("androidx.arch.core:core-testing:2.0.0")
+    implementation(Test.junit4)
+    implementation(Test.junitAndroidExt)
+    testImplementation(Test.mockk)
+    androidTestImplementation(Test.androidxTesting)
 
 }
