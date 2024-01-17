@@ -1,3 +1,6 @@
+# Localisation de la fonctionnalité demandée 
+Le code propre à la partie de l'exercice se situe [ici](https://github.com/juque-jqx/instant-system-news/tree/main/features/news/src/main/java/com/example/news).
+
 # Architecture
 Pour ce projet, j'ai utilisé la Clean Architecture. Celle-ci permet d'avoir un code facilement maintenable, testable et évolutif.
 Celle-ci est un standard, très bien documenté, ce qui facilite son adoption.
